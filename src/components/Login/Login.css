@@ -1,0 +1,22 @@
+.google-col Button{
+    font-size: 10px;
+}
+.signIn-col{
+    padding-bottom: 2px;
+}
+.signIn-col label{
+    color: blueviolet;
+}
+
+.signIn-col input{
+    line-height: 10px;
+    padding-right: 100px;
+}
+
+.btn-sub{
+    padding: 5px 20px;
+    margin-top: 10px;
+    background: blueviolet;
+    border: 1px solid gray;
+    color: #fff;
+}

@@ -3,6 +3,7 @@ import './Product.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {  faShoppingCart } from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom';
+import { Button } from '@material-ui/core';
 const Product = (props) => {
     
     const {img, name, seller, price, stock, key} = props.product;
@@ -21,7 +22,11 @@ const Product = (props) => {
                <p><small>${price}</small></p>
                <p><small>Only {stock} left in stock -Order soon</small></p>
               { props.ShowAddToCard === true && 
-              <button className="main-button" onClick={() => props.handelAddProduct(props.product)}><FontAwesomeIcon icon={faShoppingCart} /> add to cart</button>}
+              <div className="main-button">
+              <Button  onClick={() => props.handelAddProduct(props.product)}><FontAwesomeIcon icon={faShoppingCart} />    add to cart</Button>
+              </div>
+              }
+           
             </div>
             
         </div>

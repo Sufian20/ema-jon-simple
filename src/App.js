@@ -18,6 +18,7 @@ import Login from './components/Login/Login';
 import { createContext, useState } from 'react';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 
+
 export const UserContext = createContext();
 
 
@@ -27,6 +28,7 @@ function App() {
 
   return (
     <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
+ 
       <Router>
         <Header></Header>
         <Switch>

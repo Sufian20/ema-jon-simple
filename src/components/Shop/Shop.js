@@ -5,6 +5,7 @@ import Cart from '../Cart/Cart';
 import Product from '../Product/Product';
 import './Shop.css'
 import { Link } from 'react-router-dom';
+import { Container, Grid } from '@material-ui/core';
 
 const Shop = () => {
     const first10 = fakeData.slice(0, 10);
@@ -49,8 +50,12 @@ const Shop = () => {
 
 
     return (
+        <Container maxWidth="lg">
+
         <div>
+        <Grid container>
             <div className="twin-container">
+             <Grid item xs={10}>
                 <div className="prodcut-container">
 
                     {
@@ -58,14 +63,19 @@ const Shop = () => {
                     }
 
                 </div>
+                </Grid>
+                <Grid item xs={2} >
                 <div className="cart-container">
                     <Cart cart={cart}></Cart>
                     <Link to="/review">
                         <button className="main-button">Review order</button>
                     </Link>
                 </div>
+                </Grid>
             </div>
+            </Grid>
         </div>
+        </Container>
     );
 };
 

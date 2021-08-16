@@ -5,6 +5,7 @@ import Cart from '../Cart/Cart';
 import ReviewItem from '../ReviewItem/ReviewItem';
 import happyImage from '../../images/giphy.gif';
 import { useHistory } from 'react-router-dom';
+import { Container, Grid } from '@material-ui/core';
 
 const Review = () => {
 
@@ -43,6 +44,8 @@ const Review = () => {
     }
     return (
         <div className="twin-container"> 
+        <Grid container>
+          <Grid item xs={10}>
            <div className="prodcut-container">
            {
                cart.map(pd => <ReviewItem
@@ -54,6 +57,8 @@ const Review = () => {
                thankyou
            }
            </div>
+           </Grid>
+           <Grid item xs={2}>
            <div className="card-container">
                <Cart cart={cart}>
                    <button className="main-button" onClick={handelProcedCheckout}>
@@ -61,6 +66,8 @@ const Review = () => {
                    </button>
                </Cart>
            </div>
+           </Grid>
+           </Grid>
         </div>
     );
 };
